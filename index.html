@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="Language" content="fi" />
+        <script src=skriptit.js></script>
+        <title>Kaverilista</title>
+    </head>
+    
+<body>
+
+<h1>Kaverilista</h1>
+
+<button onclick="lisaaKaveri()">Lisää Kaveri</button>
+<button onclick="B()">Poista Kaveri</button>
+<button onclick="C()">Järjestä Kaverit</button>
+
+<input type="text" id="nimi_kentta" onkeyup="myFunction()" placeholder="Etsi kavereita...">
+
+<ul id="myUL">
+  <li><a href="jorma.html">Jorma</a></li>
+  <li><a href="mauno.html">Mauno</a></li>
+
+  <li><a href="tauno.html">Tauno</a></li>
+  <li><a href="eero.html">Eero</a></li>
+
+  <li><a href="kari.html">Kari</a></li>
+  <li><a href="raimo.html">Raimo</a></li>
+  <li><a href="aatu.html">Aatu</a></li>
+</ul>
+
+<ul id="demo"></ul>
+
+<script>
+
+var frendit = [];
+
+function lisaaKaveri() {
+    var kaveri = window.prompt("Anna kaverin nimi");
+    console.log(frendit);
+    document.getElementById("myUL").innerHTML += '<li><a href="'+kaveri+'.html">'+kaveri+'</a></li>';
+}
+function B() {
+    document.getElementById("demo").innerHTML = ;
+}
+function C() {
+    document.getElementById("demo").innerHTML = "ei toimi (3)";
+}
+
+</script>
+<script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("nimi_kentta");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+        
+                }
+            }
+        }
+        </script>
+
+
+</body>
+</html>

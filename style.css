@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(225, 125, 233);
+}
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+a {
+    font-style: oblique;
+    font-family: sans-serif;
+    color: rgb(255, 0, 0);
+    
+    
+}
